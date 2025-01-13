@@ -11,7 +11,7 @@ function laadAutoDatabase() {
             jsonData.forEach(auto => {
                 let row = tabelLichaam.insertRow();
                 row.innerHTML = `
-                    <td><img src="${auto['Merk Logo']}" alt="${auto['Merknaam']}" width="50"></td>
+                    <td><img src="${auto['Logo']}" alt="${auto['Merknaam']}" width="40"></td>
                     <td>${auto['Merknaam']}</td>
                     <td>${auto['Model']}</td>
                     <td>${auto['Jaar']}</td>
