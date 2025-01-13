@@ -1,33 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px;
     text-align: center;
+    padding: 20px;
 }
 
-#auto-lijst {
-    margin: 20px;
-}
-
-.auto-item {
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
     background-color: white;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.auto-item img {
-    width: 100%; /* Zorgt ervoor dat de afbeelding de beschikbare ruimte benut */
-    max-width: 300px; /* Maximaal 300px breed, past zich aan voor kleinere schermen */
-    height: auto; /* Verhouding behouden */
-    display: block;
-    margin-top: 10px;
-    border-radius: 8px; /* Optioneel: maakt de hoeken van de afbeelding rond */
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table img {
+    width: 40px;
+    height: auto;
 }
