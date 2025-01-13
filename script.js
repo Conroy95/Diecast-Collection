@@ -1,54 +1,39 @@
-// Array met verzamelde miniatuur auto's
-const autoData = [
-    {
-        logo: "https://www.carlogos.org/car-logos/ferrari-logo-2002-640.png",
-        merk: "Ferrari",
-        model: "F40",
-        jaar: "1987",
-        schaal: "1:18",
-        categorie: "Sportwagen",
-        opmerking: "Uitgebracht ter gelegenheid van het 40-jarig jubileum."
-    },
-    {
+document.addEventListener('DOMContentLoaded', () => {
+    const autoData = [
+        {
+            logo: 'img/logo1.png',
+            merknaam: 'Merk A',
+            model: 'Model 1',
+            jaar: 2020,
+            schaal: '1:18',
+            categorie: 'Sport',
+            opmerking: 'Mooie gedetailleerde auto'
+        },
+        {
+            logo: 'img/logo2.png',
+            merknaam: 'Merk B',
+            model: 'Model 2',
+            jaar: 2018,
+            schaal: '1:24',
+            categorie: 'Oldtimer',
+            opmerking: 'Vintage model'
+        }
+        // Voeg hier meer gegevens toe
+    ];
 
-        logo: "https://www.carlogos.org/car-logos/porsche-logo-2014-full-640.png",        
-        merk: "Porsche",
-        model: "911",
-        jaar: "1965",
-        schaal: "1:24",
-        categorie: "Sportwagen",
-        opmerking: "De iconische Porsche 911."
-    },
-    {
-        logo: "https://www.carlogos.org/logo/Volkswagen-logo-2019-640x500.jpg",
-        merk: "Volkswagen",
-        model: "Beetle",
-        jaar: "1968",
-        schaal: "1:32",
-        categorie: "Volkswagen",
-        opmerking: "De klassieke Volkswagen Kever."
-    }
-];
+    const tableBody = document.querySelector('#auto-database tbody');
 
-// Functie om de gegevens in de tabel te plaatsen
-function renderTable() {
-    const tableBody = document.querySelector('#auto-table tbody');
     autoData.forEach(auto => {
         const row = document.createElement('tr');
-        
         row.innerHTML = `
-            <td><img src="${auto.logo}" alt="${auto.merk} logo"></td>            
-            <td>${auto.merk}</td>
+            <td><img src="${auto.logo}" alt="${auto.merknaam} logo" style="width:50px;"></td>
+            <td>${auto.merknaam}</td>
             <td>${auto.model}</td>
             <td>${auto.jaar}</td>
             <td>${auto.schaal}</td>
             <td>${auto.categorie}</td>
             <td>${auto.opmerking}</td>
         `;
-        
         tableBody.appendChild(row);
     });
-}
-
-// Laad de tabel
-renderTable();
+});
