@@ -83,11 +83,37 @@ footer p {
 
 /* Responsieve stijlen */
 @media (max-width: 768px) {
+    /* Verklein de tabel en pas de cel-inhoud aan voor kleinere schermen */
     table {
         font-size: 0.9rem;
     }
 
+    table th, table td {
+        padding: 8px;
+    }
+
+    /* Verkort de kolommen voor kleinere schermen */
+    table td:nth-child(4), table th:nth-child(4) {
+        display: none; /* Verberg de 'Schaal' kolom */
+    }
+
+    table td:nth-child(5), table th:nth-child(5) {
+        display: none; /* Verberg de 'Categorie' kolom */
+    }
+
+    table td:nth-child(6), table th:nth-child(6) {
+        display: none; /* Verberg de 'Opmerking' kolom */
+    }
+
+    /* Header vergroot voor kleinere schermen */
     header h1 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pas de grootte van de logo-afbeeldingen verder aan op kleine schermen */
+    table img {
+        width: 30px;
     }
 }
