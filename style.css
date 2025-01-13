@@ -1,77 +1,62 @@
-/* Algemene instellingen */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Basisstijl voor de website */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
     color: #333;
-    padding: 20px;
 }
 
 header {
+    background-color: #0044cc;
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 36px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+#auto-lijst {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-#auto-database {
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-#auto-database th, #auto-database td {
-    border: 1px solid #ddd;
-    padding: 8px;
+th, td {
+    padding: 12px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-#auto-database th {
-    background-color: #007BFF;
+th {
+    background-color: #333;
     color: white;
 }
 
 footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    margin-top: 20px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Mobielvriendelijk ontwerp */
-@media (max-width: 600px) {
-    table, th, td {
-        width: 100%;
-        display: block;
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
     }
 
-    nav ul {
-        display: block;
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
+    table th, table td {
+        font-size: 14px;
     }
 }
