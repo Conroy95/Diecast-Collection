@@ -1,119 +1,75 @@
-/* Algemene stijlen */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
+/* Algemeen stijlen */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
 }
 
-/* Header stijl */
 header {
-    background-color: #2C3E50;
-    color: white;
-    padding: 40px 0;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 header h1 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 2.5rem;
-    margin: 0;
+    font-size: 2.5em;
 }
 
-/* Tabelstijl */
-table {
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+#auto-database {
     width: 100%;
-    margin-top: 40px;
     border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    margin-top: 20px;
 }
 
-table th, table td {
-    padding: 12px;
+#auto-database th, #auto-database td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
-table th {
-    background-color: #34495E;
+#auto-database th {
+    background-color: #007BFF;
     color: white;
-    font-weight: 500;
 }
 
-table td {
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-table tr:hover {
-    background-color: #ecf0f1;
-}
-
-/* Logo's in de tabel */
-table img {
-    width: 40px;
-    height: auto;
-    border-radius: 50%;
-}
-
-/* Footer stijl */
 footer {
-    background-color: #2C3E50;
-    color: white;
     text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-/* Responsieve stijlen */
-@media (max-width: 768px) {
-    /* Verklein de tabel en pas de cel-inhoud aan voor kleinere schermen */
-    table {
-        font-size: 0.9rem;
+/* Mobielvriendelijk ontwerp */
+@media (max-width: 600px) {
+    table, th, td {
+        width: 100%;
+        display: block;
     }
-
-    table th, table td {
-        padding: 8px;
+    nav ul {
+        display: block;
+        text-align: center;
     }
-
-    /* Verkort de kolommen voor kleinere schermen */
-    table td:nth-child(4), table th:nth-child(4) {
-        display: none; /* Verberg de 'Schaal' kolom */
-    }
-
-    table td:nth-child(5), table th:nth-child(5) {
-        display: none; /* Verberg de 'Categorie' kolom */
-    }
-
-    table td:nth-child(6), table th:nth-child(6) {
-        display: none; /* Verberg de 'Opmerking' kolom */
-    }
-
-    /* Header vergroot voor kleinere schermen */
-    header h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Pas de grootte van de logo-afbeeldingen verder aan op kleine schermen */
-    table img {
-        width: 30px;
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
     }
 }
