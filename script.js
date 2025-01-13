@@ -15,6 +15,8 @@ fetch('autos.csv')
                 <p>Jaar: ${cells[3]}</p>
                 <p>Schaal: ${cells[4]}</p>
                 <p>Kleur: ${cells[5]}</p>
+                <p>Categorie: ${cells[6]}</p>
+                <p>Opmerking: ${cells[7]}</p>
             `;
             autoLijst.appendChild(autoItem);
         });
