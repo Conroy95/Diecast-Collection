@@ -13,7 +13,8 @@ fetch('autos.csv')
                 <p>Merk: ${cells[1]}</p>
                 <p>Model: ${cells[2]}</p>
                 <p>Jaar: ${cells[3]}</p>
-                <p>Kleur: ${cells[4]}</p>
+                <p>Schaal: ${cells[4]}</p>
+                <p>Kleur: ${cells[5]}</p>
             `;
             autoLijst.appendChild(autoItem);
         });
