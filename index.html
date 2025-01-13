@@ -4,41 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miniatuur Auto Verzameling</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Mijn Miniatuur Auto Verzameling</h1>
-        </div>
+        <h1>Mijn Miniatuur Auto Verzameling</h1>
+        <nav>
+            <ul>
+                <li><a href="#collectie">Verzameling</a></li>
+                <li><a href="#overzicht">Overzicht</a></li>
+            </ul>
+        </nav>
     </header>
+    
+    <section id="collectie">
+        <h2>Mijn Collectie</h2>
+        <table id="auto-database">
+            <thead>
+                <tr>
+                    <th>Logo</th>
+                    <th>Merknaam</th>
+                    <th>Model</th>
+                    <th>Jaar</th>
+                    <th>Schaal</th>
+                    <th>Categorie</th>
+                    <th>Opmerking</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Gegevens worden hier geladen via JavaScript -->
+            </tbody>
+        </table>
+    </section>
 
-    <main>
-        <div class="container">
-            <table id="auto-table">
-                <thead>
-                    <tr>
-                        <th>Logo</th>                        
-                        <th>Merk</th>
-                        <th>Model</th>
-                        <th>Jaar</th>
-                        <th>Schaal</th>
-                        <th>Categorie</th>
-                        <th>Opmerking</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- De JavaScript zal hier de gegevens toevoegen -->
-                </tbody>
-            </table>
-        </div>
-    </main>
+    <section id="overzicht">
+        <h2>Overzicht</h2>
+        <p>Welkom op de website van mijn miniatuur auto verzameling! Hier kun je alle auto's bekijken die ik heb verzameld, inclusief details zoals het merk, model, en meer.</p>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Miniatuur Auto Verzameling. Alle rechten voorbehouden.</p>
-        </div>
+        <p>&copy; 2025 Miniatuur Auto Verzameling</p>
     </footer>
 
     <script src="script.js"></script>
