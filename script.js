@@ -37,13 +37,13 @@ function renderTable() {
         const row = document.createElement('tr');
         
         row.innerHTML = `
+            <td><img src="${auto.logo}" alt="${auto.merk} logo"></td>            
             <td>${auto.merk}</td>
             <td>${auto.model}</td>
             <td>${auto.jaar}</td>
             <td>${auto.schaal}</td>
             <td>${auto.categorie}</td>
             <td>${auto.opmerking}</td>
-            <td><img src="${auto.logo}" alt="${auto.merk} logo"></td>
         `;
         
         tableBody.appendChild(row);
