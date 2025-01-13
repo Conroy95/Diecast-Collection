@@ -7,7 +7,7 @@ const autoData = [
         schaal: "1:18",
         categorie: "Sportwagen",
         opmerking: "Uitgebracht ter gelegenheid van het 40-jarig jubileum.",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ferrari_Logo.svg/1200px-Ferrari_Logo.svg.png"
+        logo: "https://www.carlogos.org/car-logos/ferrari-logo-2002-640.png"
     },
     {
         merk: "Porsche",
@@ -16,7 +16,7 @@ const autoData = [
         schaal: "1:24",
         categorie: "Sportwagen",
         opmerking: "De iconische Porsche 911.",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Porsche_logo_2012.svg/1200px-Porsche_logo_2012.svg.png"
+        logo: "https://www.carlogos.org/car-logos/porsche-logo-2014-full-640.png"
     },
     {
         merk: "Volkswagen",
@@ -25,7 +25,7 @@ const autoData = [
         schaal: "1:32",
         categorie: "Volkswagen",
         opmerking: "De klassieke Volkswagen Kever.",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Volkswagen_logo_2019.svg/1200px-Volkswagen_logo_2019.svg.png"
+        logo: "https://www.carlogos.org/logo/Volkswagen-logo-2019-640x500.jpg"
     }
 ];
 
