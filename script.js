@@ -1,39 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const autoData = [
-        {
-            logo: 'img/logo1.png',
-            merknaam: 'Merk A',
-            model: 'Model 1',
-            jaar: 2020,
-            schaal: '1:18',
-            categorie: 'Sport',
-            opmerking: 'Mooie gedetailleerde auto'
-        },
-        {
-            logo: 'img/logo2.png',
-            merknaam: 'Merk B',
-            model: 'Model 2',
-            jaar: 2018,
-            schaal: '1:24',
-            categorie: 'Oldtimer',
-            opmerking: 'Vintage model'
-        }
-        // Voeg hier meer gegevens toe
-    ];
+// Functie om de Excel-gegevens in de tabel te laden
+function laadAutoDatabase() {
+    fetch('auto-database.xlsx')
+        .then(response => response.arrayBuffer())
+        .then(data => {
+            const workbook = XLSX.read(data, {type: 'array'});
+            const sheet = workbook.Sheets[workbook.SheetNames[0]];
+            const jsonData = XLSX.utils.sheet_to_json(sheet);
 
-    const tableBody = document.querySelector('#auto-database tbody');
+            const tabelLichaam = document.querySelector("#auto-database tbody");
+            jsonData.forEach(auto => {
+                let row = tabelLichaam.insertRow();
+                row.innerHTML = `
+                    <td><img src="${auto['Merk Logo']}" alt="${auto['Merknaam']}" width="50"></td>
+                    <td>${auto['Merknaam']}</td>
+                    <td>${auto['Model']}</td>
+                    <td>${auto['Jaar']}</td>
+                    <td>${auto['Schaal']}</td>
+                    <td>${auto['Categorie']}</td>
+                    <td>${auto['Opmerking']}</td>
+                `;
+            });
+        })
+        .catch(error => console.error('Fout bij het laden van de database:', error));
+}
 
-    autoData.forEach(auto => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td><img src="${auto.logo}" alt="${auto.merknaam} logo" style="width:50px;"></td>
-            <td>${auto.merknaam}</td>
-            <td>${auto.model}</td>
-            <td>${auto.jaar}</td>
-            <td>${auto.schaal}</td>
-            <td>${auto.categorie}</td>
-            <td>${auto.opmerking}</td>
-        `;
-        tableBody.appendChild(row);
-    });
-});
+window.onload = laadAutoDatabase;
