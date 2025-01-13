@@ -1,4 +1,4 @@
-/* Algemeen stijlen */
+/* Algemene instellingen */
 * {
     margin: 0;
     padding: 0;
@@ -64,10 +64,12 @@ footer {
         width: 100%;
         display: block;
     }
+
     nav ul {
         display: block;
         text-align: center;
     }
+
     nav ul li {
         display: block;
         margin-bottom: 10px;
