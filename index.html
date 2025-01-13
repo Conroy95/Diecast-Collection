@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Miniatuur Auto Verzameling</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Mijn Miniatuur Auto Verzameling</h1>
-        <nav>
-            <ul>
-                <li><a href="#collectie">Verzameling</a></li>
-                <li><a href="#overzicht">Overzicht</a></li>
-            </ul>
-        </nav>
+        <p>Welkom bij mijn verzameling van miniatuurauto's!</p>
     </header>
 
-    <section id="collectie">
-        <h2>Mijn Collectie</h2>
+    <section id="auto-lijst">
+        <h2>Verzameling</h2>
         <table id="auto-database">
             <thead>
                 <tr>
-                    <th>Logo</th>
+                    <th>Merk Logo</th>
                     <th>Merknaam</th>
                     <th>Model</th>
                     <th>Jaar</th>
@@ -32,18 +28,13 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Auto gegevens worden hier geladen via JavaScript -->
+                <!-- Gegevens uit de Excel-database worden hier geladen -->
             </tbody>
         </table>
     </section>
 
-    <section id="overzicht">
-        <h2>Overzicht</h2>
-        <p>Welkom op de website van mijn miniatuur auto verzameling! Hier kun je alle auto's bekijken die ik heb verzameld, inclusief details zoals merk, model, schaal, en meer.</p>
-    </section>
-
     <footer>
-        <p>&copy; 2025 Miniatuur Auto Verzameling</p>
+        <p>&copy; 2025 Mijn Miniatuur Auto Verzameling</p>
     </footer>
 
     <script src="script.js"></script>
