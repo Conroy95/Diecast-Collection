@@ -10,9 +10,10 @@ fetch('autos.csv')
             autoItem.classList.add('auto-item');
             autoItem.innerHTML = `
                 <h2>${cells[0]}</h2>
-                <p>Model: ${cells[1]}</p>
-                <p>Jaar: ${cells[2]}</p>
-                <p>Kleur: ${cells[3]}</p>
+                <p>Merk: ${cells[1]}</p>
+                <p>Model: ${cells[2]}</p>
+                <p>Jaar: ${cells[3]}</p>
+                <p>Kleur: ${cells[4]}</p>
             `;
             autoLijst.appendChild(autoItem);
         });
