@@ -23,3 +23,11 @@ header {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+.auto-item img {
+    width: 100%; /* Zorgt ervoor dat de afbeelding de beschikbare ruimte benut */
+    max-width: 300px; /* Maximaal 300px breed, past zich aan voor kleinere schermen */
+    height: auto; /* Verhouding behouden */
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px; /* Optioneel: maakt de hoeken van de afbeelding rond */
+}
